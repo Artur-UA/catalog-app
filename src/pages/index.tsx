@@ -1,12 +1,13 @@
 import Image from 'next/image'
-import { Inter } from 'next/font/google'
+import { Inter, Dancing_Script } from 'next/font/google'
 import Layout from '@/components/layout/Layout'
 
-const inter = Inter({ subsets: ['latin'] })
+//const inter = Inter({ subsets: ['latin'] })
+const inter = Dancing_Script({ weight: ['600', '400'], subsets: ['latin'] })
 
 export default function Home() {
   return (
-    <Layout>
+    <Layout title='Home page' description='Text for descriptions'>
     <main
       className={`flex min-h-screen flex-col items-center justify-between p-24 ${inter.className}`}
     >

@@ -8,7 +8,7 @@ const Header: FC  = () => {
     console.log(pathname);
     
     return (
-        <header className="flex items-center w-full justify-center	">
+        <header className="flex items-center w-full justify-center">
             <Link href='/' className={`${pathname === '/'? 'text-green-600' : ''} mx-10 p-2.5 text-lg text-gray-700 transition-colors ease-in-out  hover:underline underline-offset-2`}>
                 Home
             </Link>

@@ -1,13 +1,15 @@
 import { FC, PropsWithChildren } from "react";
+import Meta from "../seo/Meta";
+import { Imeta } from "../seo/meta.interface";
 import Header from "./header/Header";
 
-const Layout: FC <PropsWithChildren<unknown>> = ({children}) => {
+const Layout: FC <PropsWithChildren<Imeta>> = ({children, title, description}) => {
     
     return (
-        <div>
+        <Meta title= {title} description={description}>
             <Header/>
             {children}
-        </div>
+        </Meta>
     )
 }
 
