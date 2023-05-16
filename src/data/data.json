@@ -1,0 +1,34 @@
+{
+    "cars": [
+        {
+            "id": 1,
+            "name": "Toyota",
+            "price": 1200,
+            "photo": "http://localhost:3333/toyota.jpg"
+        },
+        {
+            "id": 2,
+            "name": "Honda",
+            "price": 1800,
+            "photo": "http://localhost:3333/honda.jpg"
+        },
+        {
+            "id": 3,
+            "name": "Lexus",
+            "price": 1000,
+            "photo": "http://localhost:3333/lexus.jpg"
+        },
+        {
+            "id": 4,
+            "name": "Kia",
+            "price": 1299,
+            "photo": "http://localhost:3333/kia.jpg"
+        },
+        {
+            "id": 5,
+            "name": "BMW",
+            "price": 950,
+            "photo": "http://localhost:3333/bmw.jpg"
+        }
+    ]
+}
