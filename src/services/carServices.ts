@@ -9,14 +9,14 @@ export const CarServices = {
         const {data} = await axios.get<ICar[]>('./cars');
         return data;
     },
+
     async getByID(id:string){
-        const data = await axios.get<ICar[]>('./cars', {
+        const {data} = await axios.get<ICar[]>('./cars', {
             params: {
                 id
             }
         });
-        console.log(data);
-        return data;
+        return data[0];
     }
 }
 

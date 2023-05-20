@@ -3,7 +3,7 @@ import { Inter, Dancing_Script } from 'next/font/google'
 import Layout from '@/components/layout/Layout'
 import { FC } from 'react'
 import { ICarsData } from '@/interface/carInterface'
-import { GetServerSideProps, GetStaticProps } from 'next'
+import { GetServerSideProps, GetStaticProps, NextPage } from 'next'
 import CarServices from '@/services/carServices'
 import CarItem from '@/components/ui/CarItem'
 
@@ -20,7 +20,8 @@ const inter = Dancing_Script({ weight: ['600', '400'], subsets: ['latin'] })
 
 export const getStaticProps: GetStaticProps<ICarsData> = async () => {
   const cars = await CarServices.getAll();
-
+  console.log(cars);
+  
   return {
     props: {cars},
     revalidate: 45,
@@ -28,7 +29,9 @@ export const getStaticProps: GetStaticProps<ICarsData> = async () => {
 }
 
 
-const Home: FC<ICarsData> = ({cars}) => {
+const Home: NextPage<ICarsData> = ({cars}) => {
+  console.log(cars);
+
   return (
     <Layout title='Home page' description='Text for descriptions'>
       <div>
